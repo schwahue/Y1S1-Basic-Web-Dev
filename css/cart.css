@@ -328,3 +328,11 @@ body {
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
+
+.event:hover{
+  background-color: gray;
+  color:yellow;
+  height: auto;
+  width: auto;
+  border-radius: 25px;
+}
