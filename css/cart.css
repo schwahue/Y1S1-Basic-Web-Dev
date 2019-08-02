@@ -336,3 +336,11 @@ body {
   width: auto;
   border-radius: 25px;
 }
+
+#logo{
+  color: yellow;
+}
+
+#logo:hover{
+  color:white
+}

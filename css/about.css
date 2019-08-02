@@ -120,3 +120,10 @@ h3 {
   background: #bb0000;
   color: white;
 }
+
+#logo{
+  color: yellow;
+
+#logo:hover{
+  color:white
+}
