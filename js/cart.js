@@ -61,7 +61,7 @@ function addToCartClicked(event) {
 
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-row')
+    cartRow.classList.add('row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
@@ -71,12 +71,13 @@ function addItemToCart(title, price, imageSrc) {
         }
     }
     var cartRowContents = `
-        <div class="cart-item cart-column">
+        <div class="col-sm-2"></div>
+        <div class="cart-item col-sm-6">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
+            <span class="cart-price col-sm">${price}</span>
         </div>
-        <span class="cart-price cart-column">${price}</span>
-        <div class="cart-quantity cart-column">
+        <div class="cart-quantity col-sm-4">
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
@@ -88,7 +89,7 @@ function addItemToCart(title, price, imageSrc) {
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var cartRows = cartItemContainer.getElementsByClassName('row')
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
